@@ -9,9 +9,11 @@
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <title>Free2Pay — Profile</title>
 
-    <!-- css -->
+    <!-- css (ปฏิทิน/การ์ดโปรไฟล์ ใช้ร่วมกับ search.css) -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/login.css">
 
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,35 +43,33 @@
                 </div>
             </div>
             <div class="profile">
-                <a href="../page/profile.html"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="../page/profile.html" class="active" aria-current="page" aria-label="Profile"><i
+                        class="fa-regular fa-circle-user"></i></a>
             </div>
         </div>
     </nav><!--menu-->
 
-    <!-- ==================== 1. PROFILE TOP SECTION ==================== -->
+    <!-- ==================== 1. PROFILE + FEEDBACK ==================== -->
     <section class="profile-top-section">
 
-        <!-- ฝั่งซ้าย: การ์ดโปรไฟล์ -->
         <div class="profile-card-main">
-
-            <!-- ปุ่มตั้งค่า -->
+            <button class="btn-feedback" aria-label="Feedback" id="feedbackToggle">
+                <i class="fa-regular fa-comment-dots"></i>
+            </button>
             <button class="btn-settings" aria-label="Settings">
                 <i class="fa-solid fa-gear"></i>
             </button>
 
-            <!-- รูปโปรไฟล์ -->
             <div class="profile-avatar-wrap">
                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=80"
-                    alt="L0/OFer" class="profile-avatar-img">
+                    alt="LO/OFer" class="profile-avatar-img">
                 <div class="status-on"></div>
             </div>
 
-            <!-- ชื่อ & หมวดหมู่ -->
-            <h2 class="profile-username">L0/OFer</h2>
+            <h2 class="profile-username">LO/OFer</h2>
             <p class="profile-category">นักวาด</p>
             <div class="profile-followers"><strong>67k</strong><span>Followers</span></div>
 
-            <!-- ดาวจานสีเรตติ้ง -->
             <div class="palettes-rating">
                 <i class="fa-solid fa-palette"></i>
                 <i class="fa-solid fa-palette"></i>
@@ -78,7 +78,6 @@
                 <i class="fa-solid fa-palette"></i>
             </div>
 
-            <!-- ปุ่มแอ็คชัน -->
             <div class="profile-actions">
                 <span class="badge-live"><i class="fa-solid fa-circle"></i> LIVE</span>
                 <button class="btn-icon-action" aria-label="Message">
@@ -86,28 +85,23 @@
                 </button>
             </div>
 
-            <!-- ข้อความแนะนำตัว -->
             <p class="profile-bio">
-                สวัสดีค่า ชื่อ L0/OFer เป็นนักวาดฟรีแลนซ์ค่ะ รับวาดภาพดิจิทัลทุกแนว ทั้ง Character Design, Illustration
+                สวัสดีค่า ชื่อ LO/OFer เป็นนักวาดฟรีแลนซ์ค่ะ รับวาดภาพดิจิทัลทุกแนว ทั้ง Character Design, Illustration
                 และ Fan Art 💜
             </p>
 
-            <!-- Social Media -->
             <div class="profile-socials">
-                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
             </div>
-
         </div><!-- profile-card-main -->
 
-        <!-- ฝั่งขวา: Feedback -->
         <div class="profile-feedback-box">
             <div class="feedback-header">
                 <h3 class="feedback-title">Feedback</h3>
                 <button class="btn-more" aria-label="More"><i class="fa-solid fa-ellipsis-vertical"></i></button>
             </div>
-
             <div class="line"></div>
 
             <div class="feedback-list">
@@ -156,17 +150,16 @@
             <div class="feedback-input-bar">
                 <div class="my-profile"><i class="fa-regular fa-circle-user"></i></div>
                 <div class="comment"><input type="text" placeholder="..."></div>
-                <button class="btn-send"><i class="fa-regular fa-paper-plane"></i></button>
+                <button class="btn-send" aria-label="Send"><i class="fa-regular fa-paper-plane"></i></button>
             </div>
         </div><!-- profile-feedback-box -->
 
     </section><!-- profile-top-section -->
 
-    <!-- ==================== 2. CALENDAR & PORTFOLIO ==================== -->
-    <section class="calendar-portfolio-section">
+    <!-- ==================== 2. ปฏิทิน (เปิดค้างไว้) ==================== -->
+    <section class="calendar-portfolio-section profile-cal is-open">
 
-        <!-- แถบปฏิทิน -->
-        <div class="calendar-bar" id="calendarToggle" role="button" tabindex="0" aria-expanded="false"
+        <div class="calendar-bar" id="calendarToggle" role="button" tabindex="0" aria-expanded="true"
             aria-controls="calendarPanel">
             <div class="calendar-bar-left">
                 <i class="fa-regular fa-calendar"></i>
@@ -178,8 +171,6 @@
             </div>
         </div>
 
-
-        <!-- ปฏิทิน: เปิดเมื่อกดแถบ "ปฏิทิน" -->
         <div class="calendar-panel" id="calendarPanel">
             <div class="cal-head">
                 <span class="cal-month"><i class="icon-tri"></i> ตุลาคม 2569</span>
@@ -237,220 +228,107 @@
             </div>
         </div><!-- calendar-panel -->
 
-        <!-- Grid ผลงาน 6 ช่อง -->
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1725726239783-8d25ab051f80?w=400&auto=format&fit=crop&q=60"
-                    alt="Art 1" class="portfolio-thumb">
-                <div class="portfolio-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">Digital Art</p>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1585564839347-3cf955143886?w=400&auto=format&fit=crop&q=60"
-                    alt="Art 2" class="portfolio-thumb">
-                <div class="portfolio-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">Illustration</p>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1597766295732-160ba28531e3?w=400&auto=format&fit=crop&q=60"
-                    alt="Art 3" class="portfolio-thumb">
-                <div class="portfolio-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">Fan Art</p>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=400&auto=format&fit=crop&q=60"
-                    alt="Art 4" class="portfolio-thumb">
-                <div class="portfolio-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">Character Design</p>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1629752187687-3d3c7ea3a21b?w=400&auto=format&fit=crop&q=60"
-                    alt="Art 5" class="portfolio-thumb">
-                <div class="portfolio-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">Digital Art</p>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1690369519543-c81a2121f740?w=400&auto=format&fit=crop&q=60"
-                    alt="Art 6" class="portfolio-thumb">
-                <div class="portfolio-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">Illustration</p>
-                </div>
-            </div>
-        </div><!-- portfolio-grid -->
-
-        <div class="btn-seemore-wrap">
-            <a href="#" class="btn-see-more-purple">SEE MORE <i class="icon-tri"></i></a>
-        </div>
-
     </section><!-- calendar-portfolio-section -->
 
-    <!-- ==================== 3. CATEGORY & GALLERY ==================== -->
-    <section class="category-gallery-section">
+    <!-- ==================== 3. ฟีดโพสต์ (สมุดสีม่วงน้ำเงิน) ==================== -->
+    <section class="feed-section">
 
-        <!-- แถบค้นหา + สติ๊กเกอร์ -->
-        <div class="category-search-bar">
-            <div class="sticker-ee">
-                <img src="../images/logoinpage.png" alt="ee logo">
-            </div>
-            <div class="search-pill-input">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="ค้นหา..">
-            </div>
+        <i class="feed-chat fa-regular fa-comment-dots"></i>
+
+        <!-- สติ๊กเกอร์ + โพลารอยด์ + คลิปหนีบ -->
+        <img class="feed-sticker" src="../images/logoinpage.png" alt="">
+        <div class="feed-polaroid">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300&auto=format&fit=crop&q=80"
+                alt="LO/OFer">
         </div>
+        <svg class="feed-clip" viewBox="0 0 24 72" aria-hidden="true">
+            <path d="M4 58V16a8 8 0 0 1 16 0v40a8 8 0 0 1-16 0V22a4 4 0 0 1 8 0v30" fill="none" stroke="#fff"
+                stroke-width="3.2" stroke-linecap="round" />
+        </svg>
 
-        <!-- Tag หมวดหมู่ -->
-        <div class="category-tags">
-            <a href="#" class="tag-pill">UXUI Design</a>
-            <a href="#" class="tag-pill">Digital Art</a>
-            <a href="#" class="tag-pill">UX/UI Design</a>
-            <a href="#" class="tag-pill">Handmade</a>
-            <a href="#" class="tag-pill">Graphic Design</a>
-            <a href="#" class="tag-pill">Traditional Art</a>
-        </div>
+        <div class="notebook">
+            <div class="notebook-lines"></div>
 
-        <!-- Gallery ผลงาน 3 ช่อง -->
-        <div class="gallery-cards-3">
-            <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=400&auto=format&fit=crop&q=60"
-                    alt="Gallery 1" class="gallery-thumb">
-                <div class="gallery-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">ประเภทงาน</p>
-                </div>
-                <div class="gallery-artist-avatar">
-                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" alt="">
-                </div>
+            <!-- โพสต์ฝั่งซ้าย -->
+            <div class="feed-posts" id="feedPosts">
+                <article class="post">
+                    <div class="post-head">
+                        <img class="post-avatar"
+                            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80"
+                            alt="">
+                        <div class="post-meta">
+                            <h3 class="post-name">LO/OFer <span class="post-date">12/10 &nbsp;1 วันที่ผ่านมา</span></h3>
+                            <p class="post-cat">handmade</p>
+                        </div>
+                    </div>
+                    <p class="post-text">งานใหม่ของคุณ @may สำหรับการว่าจ้างคับ<span class="post-date-d"><br>12/10
+                            &nbsp;1 วันที่ผ่านมา</span></p>
+                    <img class="post-img" src="../images/profile-post-1.png" alt="">
+                </article>
+
+                <article class="post">
+                    <div class="post-head">
+                        <img class="post-avatar"
+                            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80"
+                            alt="">
+                        <div class="post-meta">
+                            <h3 class="post-name">LO/OFer <span class="post-date">12/10 &nbsp;1 วันที่ผ่านมา</span></h3>
+                            <p class="post-cat">handmade</p>
+                        </div>
+                    </div>
+                    <p class="post-text">งานใหม่ของคุณ @may สำหรับการว่าจ้างคับ<span class="post-date-d"><br>12/10
+                            &nbsp;1 วันที่ผ่านมา</span></p>
+                    <div class="post-img post-img-2"></div>
+                </article>
+                <article class="post post-3">
+                    <div class="post-head">
+                        <img class="post-avatar"
+                            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80"
+                            alt="">
+                        <div class="post-meta">
+                            <h3 class="post-name">LO/OFer <span class="post-date">13/10 &nbsp;เมื่อสักครู่</span></h3>
+                            <p class="post-cat">UX/UI Design</p>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1765814142702-52474219184e?w=400&auto=format&fit=crop&q=60"
-                    alt="Gallery 2" class="gallery-thumb">
-                <div class="gallery-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">ประเภทงาน</p>
-                </div>
-                <div class="gallery-artist-avatar">
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=80" alt="">
-                </div>
-            </div>
-            <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1770129703548-e1ced0e4f118?w=400&auto=format&fit=crop&q=60"
-                    alt="Gallery 3" class="gallery-thumb">
-                <div class="gallery-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">ประเภทงาน</p>
-                </div>
-                <div class="gallery-artist-avatar">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80" alt="">
-                </div>
-            </div>
-            <div class="gallery-card gallery-card-extra">
-                <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=400&auto=format&fit=crop&q=60"
-                    alt="Gallery 4" class="gallery-thumb">
-                <div class="gallery-info">
-                    <p class="portfolio-name">Name Art</p>
-                    <p class="portfolio-cat">ประเภทงาน</p>
-                </div>
-                <div class="gallery-artist-avatar">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80" alt="">
-                </div>
-            </div>
-        </div><!-- gallery-cards-3 -->
 
-        <div class="btn-seemore-wrap">
-            <a href="#" class="btn-see-more-orange">SEE MORE <i class="icon-tri"></i></a>
-        </div>
-
-    </section><!-- category-gallery-section -->
-
-    <!-- ==================== 4. RECOMMENDED ARTISTS ==================== -->
-    <section class="recommended-artists-section">
-        <div class="box-live">
-            <div class="video-livebox">
-                <div class="but-liveplay">
-                    <div class="play"></div>
-                    <div class="text-live">LIVE</div>
-                </div>
-                <img src="https://images.unsplash.com/photo-1744686909443-eb72a54de998?w=300&auto=format&fit=crop&q=60"
-                    alt="" class="video">
-                <div class="profile-bar">
-                    <div class="profile-img"><img
-                            src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?w=80" alt="">
-                        <div class="status-on"></div>
+            <!-- กล่องโพสต์ผลงาน (ปักหมุด) -->
+            <p class="composer-title">Update งานใหม่ค้าบ</p>
+            <aside class="composer">
+                <span class="pin"></span>
+                <div class="composer-head">
+                    <span class="composer-avatar"><i class="fa-regular fa-circle-user"></i></span>
+                    <div>
+                        <h3 class="composer-name">USER NAME</h3>
+                        <span class="composer-cat">category <i class="icon-tri"></i></span>
                     </div>
                 </div>
-                <div class="username-box">
-                    <div class="title-username">Evelyn</div>
-                    <div class="category-user">Digital Art</div>
-                </div>
-            </div>
-            <div class="video-livebox">
-                <div class="but-liveplay">
-                    <div class="play"></div>
-                    <div class="text-live">LIVE</div>
-                </div>
-                <img src="https://images.unsplash.com/photo-1648312182804-346237fbc0ea?w=300&auto=format&fit=crop&q=60"
-                    alt="" class="video">
-                <div class="profile-bar">
-                    <div class="profile-img"><img
-                            src="https://plus.unsplash.com/premium_vector-1719858610210-ba3445e84822?w=80" alt="">
-                        <div class="status-on"></div>
+                <div class="composer-box">
+                    <textarea id="composerText" placeholder="เริ่มต้นผลงานของคุณ"
+                        aria-label="เริ่มต้นผลงานของคุณ"></textarea>
+                    <div class="composer-tools">
+                        <button type="button" class="btn-attach" aria-label="Add image"><i
+                                class="fa-regular fa-image"></i></button>
+                        <button type="button" class="btn-attach" aria-label="Add photo"><i
+                                class="fa-solid fa-camera"></i></button>
+                        <button type="button" class="btn-addbox" aria-label="Add"><i
+                                class="fa-regular fa-square-plus"></i></button>
                     </div>
                 </div>
-                <div class="username-box">
-                    <div class="title-username">Lee</div>
-                    <div class="category-user">UXUI Design</div>
-                </div>
-            </div>
-            <div class="video-livebox">
-                <div class="but-liveplay">
-                    <div class="play"></div>
-                    <div class="text-live">LIVE</div>
-                </div>
-                <img src="https://images.unsplash.com/photo-1780736309282-7af387641534?w=300&auto=format&fit=crop&q=60"
-                    alt="" class="video">
-                <div class="profile-bar">
-                    <div class="profile-img"><img
-                            src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=80" alt="">
-                        <div class="status-on"></div>
-                    </div>
-                </div>
-                <div class="username-box">
-                    <div class="title-username">Mark</div>
-                    <div class="category-user">Handmade</div>
-                </div>
-            </div>
-            <div class="video-livebox">
-                <div class="but-liveplay">
-                    <div class="play"></div>
-                    <div class="text-live">LIVE</div>
-                </div>
-                <img src="https://plus.unsplash.com/premium_photo-1679811672048-9d4b810a7588?w=300&auto=format&fit=crop&q=60"
-                    alt="" class="video">
-                <div class="profile-bar">
-                    <div class="profile-img"><img
-                            src="https://plus.unsplash.com/premium_vector-1764172269498-e4141f983494?w=80" alt="">
-                        <div class="status-on"></div>
-                    </div>
-                </div>
-                <div class="username-box">
-                    <div class="title-username">May</div>
-                    <div class="category-user">Traditional Art</div>
-                </div>
-            </div>
-        </div>
+                <button type="button" class="btn-post" id="btnPost">โพสต์ <i
+                        class="fa-regular fa-pen-to-square"></i></button>
+            </aside>
 
-    </section><!-- recommended-artists-section -->
+            <!-- ผลงานฝั่งขวา (เลื่อนได้) -->
+            <div class="art-scroll">
+                <img class="art" src="../images/profile-art-1.png" alt="">
+                <div class="art art-2"></div>
+                <img class="art" src="../images/profile-art-1.png" alt="">
+            </div>
+        </div><!-- notebook -->
+
+    </section><!-- feed-section -->
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
@@ -480,12 +358,8 @@
                 </div>
             </div>
             <div class="footer-apps">
-                <a href="#" class="app-icon" title="App Store">
-                    <i class="fa-brands fa-app-store-ios"></i>
-                </a>
-                <a href="#" class="app-icon" title="Google Play">
-                    <i class="fa-brands fa-google-play"></i>
-                </a>
+                <a href="#" class="app-icon" title="App Store"><i class="fa-brands fa-app-store-ios"></i></a>
+                <a href="#" class="app-icon" title="Google Play"><i class="fa-brands fa-google-play"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -493,8 +367,14 @@
         </div>
     </footer>
 
-
     <script>
+        // มือถือ: กดไอคอนข้อความเพื่อเปิด/ปิด Feedback
+        document.getElementById('feedbackToggle').addEventListener('click', function () {
+            document.querySelector('.profile-top-section').classList.toggle('show-feedback');
+        });
+
+
+        // กดแถบ "ปฏิทิน" เพื่อพับ/เปิดปฏิทิน
         (function () {
             var bar = document.getElementById('calendarToggle');
             var sec = bar.closest('.calendar-portfolio-section');
@@ -507,9 +387,26 @@
                 if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
             });
         })();
+
+        // กดปุ่ม "โพสต์" เพิ่มโพสต์ข้อความใหม่ไว้บนสุด
+        document.getElementById('btnPost').addEventListener('click', function () {
+            var ta = document.getElementById('composerText');
+            var text = ta.value.trim();
+            if (!text) return;
+            var feed = document.getElementById('feedPosts');
+            var first = feed.querySelector('.post');
+            var post = first.cloneNode(true);
+            var img = post.querySelector('.post-img');
+            if (img) img.remove();
+            post.querySelector('.post-text').textContent = text + '  ·  เมื่อสักครู่';
+            var d = post.querySelector('.post-date'); if (d) d.textContent = 'เมื่อสักครู่';
+            feed.insertBefore(post, first);
+            ta.value = '';
+        });
     </script>
 
     <script src="../js/menu.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>

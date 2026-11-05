@@ -10,7 +10,7 @@
     <title>Free2Pay</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
 
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,29 +24,6 @@
 
 <body>
 
-    <nav class="menu">
-        <button class="menu-toggle" aria-label="เมนู"
-            aria-expanded="false"><span></span><span></span><span></span></button>
-        <a href="../page/index.html">
-            <img src="../images/logo_white.png" alt="Free2Pay" class="logo_home">
-        </a>
-        <div class="menubar">
-            <div class="menu-links">
-                <a href="../page/index.html">Home</a>
-                <a href="../page/search.html">Search</a>
-                <a href="../page/live.html">Live</a>
-
-                <div class="login">
-                    <a href="../page/login.html">Log in</a>
-                </div>
-            </div>
-
-            <div class="profile">
-                <a href="../page/profile.html"><i class="fa-regular fa-circle-user"></i></a>
-            </div>
-        </div>
-    </nav><!--manu-->
-
     <div class="haed-file-login">
     </div><!-- อันนี้เป็นที่มันยื้นบอกหมวด โฟลเดอร์ login ขนาดมันเล็กกว่าที่ออยู่หน้า home เลยแยกกัน -->
 
@@ -55,7 +32,7 @@
         <img src="../images/logoinpage.png" alt="" class="logo-web">
 
         <div class="box-login">
-            <h2 class="head-title">Set up your<br>Identity</h2>
+            <h2 class="head-title">Set up your<br><strong>Identity</strong></h2>
 
             <div class="login-form">
 
@@ -69,7 +46,7 @@
                         <div class="pass-actions">
                             <a href="#" class="forgot-link">Forgot Password?</a>
                             <button type="button" class="btn-eye" title="แสดง/ซ่อนรหัสผ่าน">
-                                <i class="fa-regular fa-eye-slash"></i>
+                                <i class="fa-solid fa-eye-slash"></i>
                             </button>
                         </div>
                     </div><!-- กรอกรหัสผ่าน -->
@@ -98,14 +75,14 @@
 
                 <div class="interest-tags">
                     <div class="tags-row">
-                        <button type="button" class="tag-pill">UXUI Design</button>
-                        <button type="button" class="tag-pill">Digital Art</button>
-                        <button type="button" class="tag-pill">Painting</button>
-                        <button type="button" class="tag-pill">Handmade</button>
+                        <button type="button" class="login-tag">UXUI Design</button>
+                        <button type="button" class="login-tag">Digital Art</button>
+                        <button type="button" class="login-tag">UX/UI Design</button>
+                        <button type="button" class="login-tag">Handmade</button>
                     </div>
                     <div class="tags-row">
-                        <button type="button" class="tag-pill">Graphic Design</button>
-                        <button type="button" class="tag-pill">Traditional Art</button>
+                        <button type="button" class="login-tag">Graphic Design</button>
+                        <button type="button" class="login-tag">Traditional Art</button>
                     </div>
                 </div><!-- หมวดหมู่ที่เลือกได้ว่ามีงานประเภทออะไรบ้าง จ้าง/ดูงานแนวไหนได้บ้าง -->
 
@@ -119,8 +96,9 @@
         <div class="choose-container">
 
             <div class="choose-title">
-                <i class="fa-regular fa-sort-down"></i>
-                <span>ฉันเป็น ?</span>
+                <span><svg class="tri" width="30" height="26" viewBox="0 0 30 26" aria-hidden="true">
+                        <path d="M4 4h22L15 22z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round" />
+                    </svg> ฉันเป็น ?</span>
             </div>
 
             <div class="choose-roles">
@@ -131,59 +109,7 @@
         </div>
     </div><!-- กล่องเลือกroleของuser -->
 
-    <footer class="footer">
-        <div class="footer-container">
 
-            <!-- โลโก้ฝั่งซ้าย -->
-            <div class="footer-brand">
-                <a href="index.html">
-                    <img src="../images/logo_white.png" alt="Free2Pay" class="footer-logo">
-                </a>
-            </div>
-
-            <!-- เมนูลิงก์ตรงกลาง -->
-            <div class="footer-nav">
-                <!-- คอลัมน์ Home -->
-                <div class="footer-col">
-                    <h4 class="footer-title">Home</h4>
-                    <ul class="footer-list">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="live.html">Live</a></li>
-                        <li><a href="search.html">Category</a></li>
-                        <li><a href="#">Content</a></li>
-                        <li><a href="#">popular</a></li>
-                    </ul>
-                </div>
-
-                <!-- คอลัมน์ Live & Search -->
-                <div class="footer-col">
-                    <h4 class="footer-title">Live</h4>
-                    <ul class="footer-list">
-                        <li><a href="live.html">Calender</a></li>
-                    </ul>
-                    <h4 class="footer-title search-title"><a href="search.html">Search</a></h4>
-                </div>
-            </div>
-
-            <!-- ไอคอนดาวน์โหลดแอปฝั่งขวา -->
-            <div class="footer-apps">
-                <a href="#" class="app-icon" title="App Store">
-                    <i class="fa-brands fa-app-store-ios"></i>
-                </a>
-                <a href="#" class="app-icon" title="Google Play">
-                    <i class="fa-brands fa-google-play"></i>
-                </a>
-            </div>
-
-        </div><!-- footer-container -->
-
-        <!-- ข้อความ Copyright ด้านล่างสุด -->
-        <div class="footer-bottom">
-            <p>COPYRIGHT2026 FREE2PAY.ONLINE THAILAND ,2026</p>
-        </div>
-    </footer>
-
-    <script src="../js/menu.js"></script>
 </body>
 
 </html>

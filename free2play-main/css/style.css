@@ -104,7 +104,7 @@ button {
     font-weight: 600;
 }
 
-.menubar>a:first-child {
+.menubar>a.active {
     text-decoration: underline;
     text-underline-offset: 5px;
 }
@@ -1679,9 +1679,26 @@ button {
     gap: inherit;
 }
 
-.menu-links>a:first-child {
+/* ขีดเส้นใต้เมนูตามหน้าปัจจุบัน (ใส่ class="active" ที่ลิงก์ของหน้านั้น) */
+.menu-links>a.active {
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+/* หน้าโปรไฟล์: ขีดใต้ไอคอนโปรไฟล์แทน */
+.profile a.active {
+    position: relative;
+}
+
+.profile a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
 }
 
 @media (max-width: 560px) {
@@ -1816,7 +1833,11 @@ button {
         width: 100%;
     }
 
-    .menu-links>a:first-child {
+    .profile a.active::after {
+        display: none;
+    }
+
+    .menu-links>a.active {
         text-decoration: none;
     }
 
